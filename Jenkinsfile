@@ -22,7 +22,7 @@ node {
   stage ('Verify') {
       sh "'${mvnHome}/bin/mvn' verify"
   }
-  stage ('Install') {
+  //stage ('Install') {
       sh "'${mvnHome}/bin/mvn' install"
   }
   
