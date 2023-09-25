@@ -25,7 +25,5 @@ node {
   stage ('Install') {
       sh "'${mvnHome}/bin/mvn' install"
   }
-  stage ('Deploy') {
-      sh "'${mvnHome}/bin/mvn' deploy"
-  }
+  
 }
