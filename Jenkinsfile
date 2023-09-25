@@ -1,7 +1,7 @@
 node {
    def mvnHome
   stage('Prepare') {
-      git url: 'https://github.com/kesavkummari/cb9amjava.git', branch: 'main'
+      git url: 'https://github.com/Sandeep5203/jenkins-pipeline.git', branch: 'sandy'
       mvnHome = tool 'maven'
    }
   stage ('Clean') {
@@ -22,7 +22,7 @@ node {
   stage ('Verify') {
       sh "'${mvnHome}/bin/mvn' verify"
   }
-  //stage ('Install') {
+  stage ('Install') {
       sh "'${mvnHome}/bin/mvn' install"
   }
   
