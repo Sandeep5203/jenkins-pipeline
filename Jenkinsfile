@@ -5,6 +5,12 @@ pipeline {
          jdk 'java'
     }
     stages {
+        stage('Stage-0 : Static Code Analysis Using SonarQube') { 
+           steps {
+                sh 'mvn clean verify sonar:sonar'
+            }
+        }
+
         stage('Stage-1 : Clean') { 
             steps {
                 sh 'mvn clean'
@@ -25,7 +31,36 @@ pipeline {
                 sh 'mvn test'
             }
         }
-          
-         
+          stage('Stage-5 : Verify') { 
+            steps {
+                sh 'mvn verify'
+            }
+        }
+          stage('Stage-6 : Package') { 
+            steps {
+                sh 'mvn package'
+            }
+        }
+         stage('Stage-7 : Install') { 
+            steps {
+                sh 'mvn install'
+            }
+        }
+           stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+            steps {
+                sh 'mvn deploy'
+            }
+        }
+          stage('Stage-9 : Deployment - Deploy a Artifact devops-2.0.0-SNAPSHOT.war file to Tomcat Server') { 
+            steps {
+                sh 'curl -u admin:redhat@123 -T target/**.war "http://35.171.167.36:8080//manager/text/deploy?path=/8amDevOps&update=true"'
+            }
+        } 
+          stage('Stage-10 : SmokeTest') { 
+            steps {
+                sh 'curl --retry-delay 10 --retry 5 "http://35.171.167.36:8080//8amDevOps"'
+            }
+        }
+
     }
 }
