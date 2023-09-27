@@ -25,8 +25,20 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        
-         
-        
+          stage('Stage-5 : Install') { 
+            steps {
+                sh 'mvn install'
+            }
+        }
+          stage('Stage-6 : Verify') { 
+            steps {
+                sh 'mvn verify'
+            }
+        }
+          stage('Stage-7 : Package') { 
+            steps {
+                sh 'mvn package'
+            }
+        }
     }
 }
