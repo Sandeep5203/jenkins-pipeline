@@ -5,7 +5,7 @@
     <artifactId>sandeepreddy</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
-    <name>Cloud Binary Sample Spring MVC Application</name>
+    <name>Cloud Binary Sample Spring MVC Application 123</name>
 
     <properties>
         <junit.platform.version>1.2.0</junit.platform.version>
