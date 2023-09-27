@@ -5,7 +5,7 @@
     <artifactId>8amDevOps</artifactId>
     <version>3.6.3-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Cloud Binary - Project Sample Spring MVC Application</name>
+    <name>Cloud Binary - Project Sample Spring MVC Application my first pipeline</name>
 
     <properties>
         <junit.platform.version>1.2.0</junit.platform.version>
