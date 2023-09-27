@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aws.codestar.projecttemplates</groupId>
     <artifactId>8amDevOps</artifactId>
-    <version>3.6.3-SNAPSHOT</version>
+    <version>4.6.3-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Cloud Binary123 - Project Sample Spring MVC Application</name>
 
