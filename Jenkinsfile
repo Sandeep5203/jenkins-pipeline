@@ -30,11 +30,7 @@ pipeline {
                 sh 'mvn install'
             }
         }
-          stage('Stage-6 : Verify') { 
-            steps {
-                sh 'mvn verify'
-            }
-        }
+         
         
     }
 }
