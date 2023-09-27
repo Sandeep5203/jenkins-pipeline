@@ -4,7 +4,7 @@ pipeline {
          maven 'maven'
          jdk 'java'
     }
-        stages {
+    stages {
         stage('Stage-1 : Clean') { 
             steps {
                 sh 'mvn clean'
